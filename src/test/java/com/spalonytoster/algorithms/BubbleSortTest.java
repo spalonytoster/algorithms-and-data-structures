@@ -7,7 +7,7 @@ import java.util.Arrays;
 import static org.junit.Assert.assertTrue;
 
 /**
- * Created by Macieh on 2016-09-26.
+ * Created by Macieh
  */
 public class BubbleSortTest {
 
@@ -23,13 +23,4 @@ public class BubbleSortTest {
         assertTrue(Arrays.equals(referenceOutput, output));
     }
 
-    @Test
-    public void swapTest() {
-        int[] input = { 1, 2 };
-        int[] desiredResult = { 2, 1 };
-
-        bubbleSort.swap(0, 1, input);
-
-        assertTrue(Arrays.equals(desiredResult, input));
-    }
 }
