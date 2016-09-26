@@ -17,7 +17,7 @@ public class BubbleSort implements SortingAlgorithm {
     }
 
     private int[] iterationResult(int[] original, int end) {
-        int [] input = Arrays.copyOf(original, original.length);
+        int[] input = Arrays.copyOf(original, original.length);
         for (int i = 0; i < end; i++) {
             if (input[i] > input[i+1]) {
                 swap(i, i+1, input);
