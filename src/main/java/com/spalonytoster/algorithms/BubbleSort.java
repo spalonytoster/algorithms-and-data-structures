@@ -10,18 +10,15 @@ public class BubbleSort implements SortingAlgorithm {
     public int[] sort(int[] toSort) {
         int[] output = Arrays.copyOf(toSort, toSort.length);
 
-        for (int i = 0; i < output.length; i++) {
-            output = iterationResult(output);
+        for (int i = output.length-1; i > 0; i--) {
+            output = iterationResult(output, i);
         }
         return output;
     }
 
-    private int[] iterationResult(int[] original) {
+    private int[] iterationResult(int[] original, int end) {
         int [] input = Arrays.copyOf(original, original.length);
-        for (int i = 0; i < input.length; i++) {
-            if (i == input.length - 1) {
-                continue;
-            }
+        for (int i = 0; i < end; i++) {
             if (input[i] > input[i+1]) {
                 swap(i, i+1, input);
             }
