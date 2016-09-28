@@ -2,10 +2,9 @@ package com.spalonytoster.algorithms;
 
 import java.util.Arrays;
 
-/**
- * Created by Macieh
- */
 public class BubbleSort implements SortingAlgorithm {
+
+    public int comparisonCounter = 0;
 
     public int[] sort(int[] toSort) {
         int[] output = Arrays.copyOf(toSort, toSort.length);
@@ -19,6 +18,7 @@ public class BubbleSort implements SortingAlgorithm {
     private int[] iterationResult(int[] original, int end) {
         int [] input = Arrays.copyOf(original, original.length);
         for (int i = 0; i < end; i++) {
+            comparisonCounter++;
             if (input[i] > input[i+1]) {
                 swap(i, i+1, input);
             }
